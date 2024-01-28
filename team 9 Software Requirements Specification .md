@@ -64,18 +64,18 @@ This document is intended to several groups of audience members
 
 1. System Designers :
 
-They are the primary audience. It provides crucial information guiding the design phase.
+   They are the primary audience. It provides crucial information guiding the design phase.
 
 
 1. Tester :
 
-They will refer to the SRS to ensure that the actual implementation aligns seamlessly with the specified requirements.
+   They will refer to the SRS to ensure that the actual implementation aligns seamlessly with the specified requirements.
 ## <a name="_lkxt7rh9kdt7"></a>**1.3 Document Conventions**
 This document follows IEEE formatting requirements
 ## <a name="_h40qbup5blte"></a>**1.4 Product Scope**
 1. User Authentication :
 
-A secure login page for the members of the Program Committee to access the system.
+   A secure login page for the members of the Program Committee to access the system.
 
 1. Dashboard :                                                                                                       After successful login, users are directed to a personalised homepage, having profile section, papers which are already reviewed (Reviewed Papers) and papers which are unreviewed (Unreviewed Papers).
 
@@ -83,7 +83,7 @@ A secure login page for the members of the Program Committee to access the syste
 
 1. Program Committee Functionality :
 
-Program Committee members can seamlessly assign the reviewers to review the papers uploaded by the authors. Based on the reviews given by the reviewers, the Program Committee member decides whether to accept or reject the paper.
+   Program Committee members can seamlessly assign the reviewers to review the papers uploaded by the authors. Based on the reviews given by the reviewers, the Program Committee member decides whether to accept or reject the paper.
 ## <a name="_65eyxjuvd5br"></a>**1.5 References**
 `	`Refer to the following links for additional information :
 
@@ -99,7 +99,7 @@ Program Committee members can seamlessly assign the reviewers to review the pape
 `       `The program committee page on NITCONF will function as an interface for program committee members to manage reviewer profiles. They can view all papers submitted by authors, assign reviewing tasks to reviewers, send reminders if reviewers are behind schedule, contact authors, and ultimately make decisions to ACCEPT or REJECT papers based on the review given by reviewers.
 
 
-
+![](Aspose.Words.c6918e33-94eb-4438-96f6-8b58b4ae1e2c.001.png)
 
 ## <a name="_l414p28ofjm5"></a>**2.2 Product Functions**
 ### <a name="_ixei27sddgqt"></a>**2.2.1.View Submissions by Authors:** 
@@ -279,44 +279,44 @@ Implementation: Develop training materials, tutorials, or conduct training sessi
 
 - **Active Participation of Reviewers**:
 
-It is assumed that assigned reviewers will actively participate in the review process, providing timely and thorough assessments of the submitted papers.
+  It is assumed that assigned reviewers will actively participate in the review process, providing timely and thorough assessments of the submitted papers.
 
 - **Reviewer Availability:**
 
-The system assumes that reviewers are available to fulfill their reviewing tasks within the designated timelines.
+  The system assumes that reviewers are available to fulfill their reviewing tasks within the designated timelines.
 
 
 
 - **Reviewer Proficiency**:
 
-It is assumed that Program Committee members and reviewers possess the necessary technical skills to navigate and interact with the web-based system effectively.
+  It is assumed that Program Committee members and reviewers possess the necessary technical skills to navigate and interact with the web-based system effectively.
 
 - **Access to Devices**:
 
-Users are assumed to have access to reliable internet connectivity and devices capable of running standard web browsers.
+  Users are assumed to have access to reliable internet connectivity and devices capable of running standard web browsers.
 
 
 ### <a name="_f78jcwa54f7c"></a>**2.7.2 Dependencies**
 
 - **Database Management System:**
 
-The system is dependent on a compatible database management system, such as MySQL, PostgreSQL, or similar, for storing and retrieving data related to papers, reviewers, and decisions.
+  The system is dependent on a compatible database management system, such as MySQL, PostgreSQL, or similar, for storing and retrieving data related to papers, reviewers, and decisions.
 
 - **Web Server:**
 
-The web application relies on a compatible web server, such as Apache Tomcat or Jetty, for hosting and serving pages. Any changes to the web server may affect the system's performance.
+  The web application relies on a compatible web server, such as Apache Tomcat or Jetty, for hosting and serving pages. Any changes to the web server may affect the system's performance.
 
 - **Fronted Technologies:**
 
-The system utilizes frontend technologies like HTML5, CSS3, and JavaScript for creating an interactive user interface. Changes in these technologies or browser updates may impact the user experience.
+  The system utilizes frontend technologies like HTML5, CSS3, and JavaScript for creating an interactive user interface. Changes in these technologies or browser updates may impact the user experience.
 
 - **Browser Compatibility:**
 
-The System is dependent on users accessing it through modern web browsers (Google Chrome , Mozilla FireFox, Safari, etc.). The documentation will provide information on recommended browsers for optimal performance.
+  The System is dependent on users accessing it through modern web browsers (Google Chrome , Mozilla FireFox, Safari, etc.). The documentation will provide information on recommended browsers for optimal performance.
 
 - **User Account Management:**
 
-The Successful Functioning of the Program Committee module is dependent on the proper management of user accounts, including the creation , modification, and deletion of accounts as needed.
+  The Successful Functioning of the Program Committee module is dependent on the proper management of user accounts, including the creation , modification, and deletion of accounts as needed.
 ## <a name="_it8c4ivcfwb3"></a>3. System Features
 ## <a name="_eeetjud6f11v"></a>3.1 Login and Validation
 ### <a name="_vj25z5b02fgk"></a>3.1.1 Description and Priority
