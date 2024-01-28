@@ -13,11 +13,11 @@ Prepared by group 2,4 and 9 of evening batch.
 
 
 * [Introduction](#1-introduction)
- * 1.1 [Purpoose](#11-purpose)
- * 1.2 [Intended Audience](#12-intended-audience)
- * 1.3 [Product Scope](#13-product-scope)
- * 1.4 [Document Conventions](#14-document-conventions)
- * 1.5 [References](#15-references)
+  * 1.1 [Purpoose](#11-purpose)
+  * 1.2 [Intended Audience](#12-intended-audience)
+  * 1.3 [Product Scope](#13-product-scope)
+  * 1.4 [Document Conventions](#14-document-conventions)
+  * 1.5 [References](#15-references)
 * [Overall Description](#2-overall-description)
   * 2.1 [Product Overview](#21-product-overview)
   * 2.2 [Product Functions](#22-product-functions)
