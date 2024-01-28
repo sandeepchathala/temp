@@ -122,9 +122,9 @@ Ultimately, the committee possesses the power to make crucial decisions regardin
  
 ## 2.3. User Classes and Characteristics
 
- **USER: PROGRAM COMMITTEE MEMBER**
+### **USER: PROGRAM COMMITTEE MEMBER**
 
-Frequency of Use: Program committee members engage with the system periodically throughout the conference planning and reviewing process. Focusing on strategic decision-making and oversight.
+**Frequency of Use:** Program committee members engage with the system periodically throughout the conference planning and reviewing process. Focusing on strategic decision-making and oversight.
 
 **Functions Used:**
 
@@ -164,7 +164,7 @@ The system requires a dedicated server with modern processors, at least 8GB of R
 ### 2.4.3 Network requirements:
 - Adequate bandwidth and network stability are crucial for seamless access and data exchange, especially for real-time features.
 - The system uses HTTPS for secure communication over the internet.
-- 
+  
 ### 2.4.4 Performance Requirements:
 - The system aims for optimal performance, recommending modern processors, at least 8GB of RAM, and a stable internet connection for laptop and desktop users.
 - Performance expectations include responsive web pages, low latency, and scalability to handle varying user loads
@@ -172,7 +172,7 @@ The system requires a dedicated server with modern processors, at least 8GB of R
 ### 2.4.5 Security Requirements:
 - The system implements HTTPS for secure communication.
 - Security considerations include user authentication, authorization mechanisms, and data protection measures to ensure the confidentiality and integrity of user information.
-- 
+  
 ### 2.4.6 Compatibility Requirements:
 - The application is designed for cross-platform compatibility, ensuring it runs smoothly irrespective of the user's operating system.
 - It is compatible with modern web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
@@ -233,50 +233,42 @@ The system requires a dedicated server with modern processors, at least 8GB of R
 - **Login :** Program committee members log in with their details and are directed to the member's dashboard.
 
 - **Top Navigation Bar :** Features  a collapsible navigation with the following options:
-- Profile
-- View Reviewed Papers
-- View UnReviewed Papers.
+     - Profile
+     - View Reviewed Papers
+     - View UnReviewed Papers
 
 ### Pages and Functionalities
 
-#### Profile Page
+### - Profile Page
 
-**Layout** - Displays the details of the Program Committee member
+   **Layout** - Displays the details of the Program Committee member
 
-**Button :** 
-i. **Edit Profile**: includes a Edit Profile button to edit the details
+   **Button :**
 
-#### View Reviewed Papers Page
+   - i. **Edit Profile** : includes a Edit Profile button to edit the details
+
+### - View Reviewed Papers Page
 
 **Layout** - Displays the reviewed papers in a row-wise manner
 
 **Columns :** 
+  - i. **Filter :** includes a filter button to display the required papers based on tags.
+  - ii. **View a reviewed paper :** Here it shows paper title and some information regarding the paper and display paper upon clicking on it
+  - iii. **Status :** indicates the status of the assigned reviewers for each paper (is reviewed or not ).
+  - iv. **Add reviewer :** here program committee members can add reviewer if needed for further review.
+   -v. **accept/reject :** program committee members can decide whether to accept the paper or to reject it.
 
-i. **Filter** : includes a filter button to display the required papers based on tags.
-
-ii. **View a reviewed paper** : Here it shows paper title and some information regarding the paper and display paper upon clicking on it
-
-iii. **Status** : indicates the status of the assigned reviewers for each paper (is reviewed or not ).
-
-iv. **Add reviewer*** : here program committee members can add reviewer if needed for further review.
-
-v. **accept/reject** : program committee members can decide whether to accept the paper or to reject it.
-
-### View Unreviewed Papers Page
+### - View Unreviewed Papers Page
 
 **Layout** -  Displays the unreviewed papers in a row-wise manner.
 
 **Columns :**
 
-i. **Filter** : includes a filter button to display the required papers based on tags.
-
-ii. **View unreviewed paper** : Here it shows paper title and some information regarding the paper and display paper upon clicking on it
-
-iii. **Assign reviewer** : here committee members can add reviewer to each paper to review and send mail to the reviewer (to notify reviewer).
-
-iv. **Contact Author** : For any queries regarding the submitted papers committee members can contact the respective author.
-
-v. **Send Reminder** : send reminder to the reviewer if the reviewer has not reviewed the assigned paper.
+   - i. **Filter** : includes a filter button to display the required papers based on tags.
+   - ii. **View unreviewed papers** : Here it shows paper title and some information regarding the paper and display paper upon clicking on it
+   - iii. **Assign reviewer** : here committee members can add reviewer to each paper to review and send mail to the reviewer (to notify reviewer).
+   - iv. **Contact Author** : For any queries regarding the submitted papers committee members can contact the respective author.
+   - v. **Send Reminder** : send reminder to the reviewer if the reviewer has not reviewed the assigned paper.
 
 ## 2.7 Assumptions and Dependencies
 ### 2.7.1 Assumptions	
