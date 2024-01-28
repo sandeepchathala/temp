@@ -101,7 +101,7 @@ This document follows IEEE formatting requirements
    The program committee page on NITCONF will function as an interface for program committee members to manage reviewer profiles. They can view all papers submitted by authors, assign reviewing tasks to reviewers, send reminders if reviewers are behind schedule, contact authors, and ultimately make decisions to ACCEPT or REJECT papers based on the review given by reviewers.
 
 
-![](Aspose.Words.c6918e33-94eb-4438-96f6-8b58b4ae1e2c.001.png)
+![Alt text](./Product_Overview(1).jpg)
 
 ## 2.2 Product Functions
 
