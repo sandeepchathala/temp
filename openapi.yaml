@@ -1,0 +1,385 @@
+openapi: 3.0.0
+info:
+  title: Nitconf Website API
+  description: This is a documentation for the Nitconf website API. This website allows Authors to upload their papers, allows Reviewers to review the papers which are assigned to them and allows Program Committe Members (PC Members) to assign reviewers to the uploaded papers and decides whether to accept or reject the paper based on the review of the reviewers
+  version: 1.0.0
+
+
+tags:
+  - name: Home
+    description: Get the landing page of the NITCONF website
+  - name: PCMember
+    description: Everything about PCmember
+  - name: Papers
+    description: Provides all the requested papers
+  - name: Filter
+    description: All filter opertaions
+  - name: Reviewer
+    description: Assigning reviewers and Showing reviewes of a paper
+  - name: Actions
+    description: All operations performed on papers
+  
+paths:
+
+  /api/:
+    get:
+      tags:
+        - Home
+      summary: Get landing page
+      description: Fetches the landing page of the application.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for landing page
+
+
+  /api/pcmember/Login:
+    get:
+      tags:
+        - PCMember
+      summary: Get PC member login page
+      description: Fetches the login page for PC members
+      operationId: getloginpage
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for PC member login page
+
+  /api/pcmember/Dashboard:
+    post:
+      tags:
+        - PCMember
+      summary: Login to PC member dashboard
+      parameters:
+        - name: email
+          in: query
+          required: true
+          description: User email for login
+          schema:
+            type: string
+        - name: password
+          in: query
+          required: true
+          description: User password for login
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content after successful login
+        '401':
+          description: Unauthorized response
+          content:
+            text/html:
+              example: HTML content for unauthorized access
+
+  /api/pcmember/Profile:
+    get:
+      tags:
+        - PCMember
+      summary: Get PC member profile page
+      description: Fetches the profile page for the currently logged-in PC member.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for PC member profile page
+
+  /api/pcmember/EditProfile:
+    get:
+      tags:
+        - PCMember
+      summary: Get edit PC member profile page
+      description: Fetches the page for editing the profile of the currently logged-in PC member.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for edit PC member profile page
+
+  /api/pcmember/UpdateProfile:
+    post:
+      tags:
+        - PCMember
+      summary: Update PC member profile
+      parameters:
+        - name: data
+          in: query
+          required: true
+          description: PCMember data
+          schema:
+            $ref: '#/components/schemas/PCMember'
+        - name: name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: confirmpassword
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content after successful profile update
+        '401':
+          description: Unauthorized response
+          content:
+            text/html:
+              example: HTML content for unauthorized access
+        '302':
+          description: Redirect to /api/pcmember/Profile
+        '404':
+          description: User not found response
+          content:
+            text/html:
+              example: HTML content for user not found
+
+  
+  /api/papers/assignedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get assigned papers page
+      description: Fetches the page displaying assigned papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for assigned papers page
+  
+  /api/papers/reviewedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get reviewed papers page
+      description: Fetches the page displaying reviewed papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for reviewed papers page
+
+  /api/papers/unreviewedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get unreviewed papers page
+      description: Fetches the page displaying unreviewed papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for unreviewed papers page
+
+  /api/papers/unassignedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get unassigned papers page
+      description: Fetches the page displaying unassigned papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for unassigned papers page
+
+  /api/papers/acceptedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get accepted papers page
+      description: Fetches the page displaying accepted papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for accepted papers page
+
+  /api/papers/rejectedpapers:
+    get:
+      tags:
+        - Papers
+      summary: Get rejected papers page
+      description: Fetches the page displaying rejected papers.
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for rejected papers page
+  
+
+  /api/filter/reviewertags:
+    get:
+      tags:
+        - Filter
+      summary: Process request for reviewer tags
+      description: Processes the request for reviewer tags based on a paper ID. It forwards the request to the reviewertags.jsp page, providing attributes such as paper_tag, paper_title, and paper_id.
+      parameters:
+        - name: paperid
+          in: query
+          required: true
+          description: ID of the paper for which to retrieve reviewer tags
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for reviewer tags page
+
+  /api/filter/bytags:
+    post:
+      tags:
+        - Filter
+      summary: Filter papers by tags
+      description: Filters papers based on the selected tag. It forwards the request to the bytags.jsp page, providing the selectedTag attribute.
+      parameters:
+        - name: selectedTag
+          in: query
+          required: true
+          description: Selected tag for filtering papers
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for filtered papers page
+
+
+  /api/reviewers/assign:
+    post:
+      tags:
+        - Reviewer
+      summary: Assign reviewers to a paper
+      description: Accepts a POST request to assign selected reviewers to a paper. The request should include the following parameters.
+      parameters:
+        - name: selectedReviewers
+          in: query
+          required: true
+          description: Comma-separated list of reviewer IDs
+          schema:
+            type: string
+        - name: paper_id
+          in: query
+          required: true
+          description: ID of the paper to be assigned
+          schema:
+            type: integer
+      responses:
+        '302':
+          description: Redirect to /api/papers/unassignedpapers
+        '404':
+          description: Paper not found response with a "Paper is not Found" view
+          
+  /api/reviewers/showreview:
+    get:
+      tags:
+        - Reviewer
+      summary: Show review details for a paper
+      description: Displays the review details for the specified paper.
+      parameters:
+        - name: paper_id
+          in: query
+          required: true
+          description: ID of the paper for which the review is to be displayed
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/html:
+              example: HTML content for showing review details page
+        '404':
+          description: Paper not found response with a "Paper is not Found" view
+  
+  
+  /api/actions/accept:
+    get:
+      tags:
+        - Actions
+      summary: Accept a paper
+      description: Accepts a paper and sends an email notification to the author. Redirects to the assigned papers page.
+      parameters:
+        - name: paper_id
+          in: query
+          required: true
+          description: ID of the paper to be accepted
+          schema:
+            type: integer
+      responses:
+        '302':
+          description: Redirect to /api/papers/assignedpapers
+        '404':
+          description: Paper not found response with a "Paper is not Found" view
+        '406':
+          description: Author not found response with an "Author is not Found" view
+
+  /api/actions/reject:
+    get:
+      tags:
+        - Actions
+      summary: Reject a paper
+      description: Rejects a paper and sends an email notification to the author. Redirects to the assigned papers page.
+      parameters:
+        - name: paper_id
+          in: query
+          required: true
+          description: ID of the paper to be rejected
+          schema:
+            type: integer
+      responses:
+        '302':
+          description: Redirect to /api/papers/assignedpapers
+        '404':
+          description: Paper not found response with a "Paper is not Found" view
+        '406':
+          description: Author not found response with an "Author is not Found" view
+
+
+
+components:
+  schemas:
+    PCMember:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+
